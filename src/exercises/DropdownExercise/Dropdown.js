@@ -1,6 +1,6 @@
 import React from 'react';
-import MenuButton from '../MenuButton';
-import {Options, Option, DropdownContainer} from '../styled-components';
+import MenuButton from '../../components/MenuButton';
+import {Options, Option, DropdownContainer} from '../../components/styled-components';
 
 const Dropdown = () => (
   <DropdownContainer>

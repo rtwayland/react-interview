@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import DropdownExercise from './components/DropdownExercise';
+import DropdownExercise from './exercises/DropdownExercise';
 import DropdownExerciseComplete from './complete/DropdownExercise';
 import MainPage from './components/MainPage';
 
