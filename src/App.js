@@ -1,18 +1,16 @@
 import React from 'react';
-import Dropdown from './components/Dropdown';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import DropdownExercise from './components/DropdownExercise';
+import DropdownExerciseComplete from './complete/DropdownExercise';
+import MainPage from './components/MainPage';
 
 function App() {
-  const options = ['One', 'Two', 'Three', 'Four'];
   return (
-    <div style={{margin: 20}}>
-      <h2>First Implementation</h2>
-      <Dropdown options={options} />
-
-      <h2 style={{marginTop: 50}}>Second Implementation</h2>
-      <Dropdown>
-        <Dropdown.Item>One</Dropdown.Item>
-      </Dropdown>
-    </div>
+    <Router>
+      <Route exact path="/" component={MainPage} />
+      <Route path="/dropdown" component={DropdownExercise} />
+      <Route path="/dropdown-complete" component={DropdownExerciseComplete} />
+    </Router>
   );
 }
 

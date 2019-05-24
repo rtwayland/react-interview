@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import MenuButton from './MenuButton';
-import {Options, Option, DropdownContainer} from './styled-components';
+import MenuButton from '../../components/MenuButton';
+import {Options, Option, DropdownContainer} from '../../components/styled-components';
 
 const Dropdown = ({options, children}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const Dropdown = ({options, children}) => {
       {isOpen && (
         <Options>
           {options && options.length > 0
-            ? options.map(item => <Option>{item}</Option>)
+            ? options.map(item => <Option key={item}>{item}</Option>)
             : React.Children.map(children, child => child)}
         </Options>
       )}
