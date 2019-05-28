@@ -9,9 +9,7 @@ const Dropdown = ({options, children}) => {
       <MenuButton onClick={() => setIsOpen(!isOpen)} />
       {isOpen && (
         <Options>
-          {options && options.length > 0
-            ? options.map(item => <Option key={item}>{item}</Option>)
-            : React.Children.map(children, child => child)}
+          {options && options.length > 0 ? options.map(item => <Option key={item}>{item}</Option>) : children}
         </Options>
       )}
     </DropdownContainer>
