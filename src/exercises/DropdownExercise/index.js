@@ -8,6 +8,7 @@ const DropdownExercise = () => {
       {/* First implementation passing Dropdown an array */}
       <h2>First Implementation</h2>
       <Dropdown options={options} />
+      
       {/* Second implementation passing Dropdown child elements */}
       
       {/* <h2 style={{marginTop: 50}}>Second Implementation</h2>
