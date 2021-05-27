@@ -5,11 +5,14 @@ import {
   Option,
   DropdownContainer,
 } from "../../components/styled-components";
+import useOnClickOutside from "./useOnClickOutside";
 
 const Dropdown = ({ options, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const optionsRef = useOnClickOutside(setIsOpen);
+
   return (
-    <DropdownContainer>
+    <DropdownContainer ref={optionsRef}>
       <MenuButton onClick={() => setIsOpen(!isOpen)} />
       {isOpen && (
         <Options>
